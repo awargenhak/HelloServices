@@ -21,9 +21,21 @@ namespace HelloServices
             //                return from n in PetDatabase.Instace.Pets 
             //                    select n;
             //            }
-            return from n in _pets.Pets
-                   where n.GetType().Name.ToLower() == pets.PetType.ToLower()
-                   select n;
+
+            switch (pets.GetType().ToString().ToLower())
+            {
+                case "DOGS":
+                case "CATS":
+                case "PARROT":
+                    return from n in _pets.Pets
+                           where n.GetType().Name == pets.PetType
+                           select n;
+                case "NAME":
+                    return from n in _pets.Pets
+                           orderby n.Name
+                           select n;
+            }
+            return null;
         }
     }
 }
