@@ -33,7 +33,6 @@ using Nancy.TinyIoc;
 
 namespace HelloServices
 {
-
     /// <summary>
     /// Create your ServiceStack web service application with a singleton AppHost.
     /// </summary>
@@ -55,13 +54,10 @@ namespace HelloServices
             //http://localhost/ServiceStack.Hello/servicestack/hello or http://localhost/ServiceStack.Hello/servicestack/hello/John%20Doe
             //You can change /servicestack/ to a custom path in the web.config.
         }
-
     }
 
     public class Bootstrapper : DefaultNancyBootstrapper
     {
-
-
         protected override void ApplicationStartup (TinyIoCContainer container, IPipelines pipelines)
         {
 #if (DEBUG)
@@ -79,4 +75,3 @@ namespace HelloServices
         }
     }
 }
-

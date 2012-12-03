@@ -31,11 +31,13 @@ using System.Web;
 using System.Web.SessionState;
 using System.Web.Routing;
 using System.Web.Mvc;
+using System.Collections.Generic;
 
 namespace HelloServices
 {
     public class Global : System.Web.HttpApplication
     {
+        public static PetDatabase petsDB;
 
         public void RegisterRoutes(RouteCollection routes) {
             routes.IgnoreRoute("api/{*pathInfo}");
@@ -43,9 +45,8 @@ namespace HelloServices
         
         void Application_Start() {
             RegisterRoutes(RouteTable.Routes);
+            
+            petsDB = PetDatabase.Instace;
         }
-                
-
     }
 }
-
