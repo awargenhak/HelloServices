@@ -81,13 +81,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\PetDatabase.cs" />
-    <Compile Include="Models\Cat.cs" />
+    <Compile Include="Models\Cat2.cs" />
+    <Compile Include="Models\Cat1.cs" />
     <Compile Include="Models\Dog.cs" />
     <Compile Include="Models\Parrot.cs" />
     <Compile Include="Models\Pets.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Services\CatSevice.cs" />
+    <Compile Include="Services\CatService2.cs" />
+    <Compile Include="Services\CatSevice1.cs" />
     <Compile Include="Services\DogService.cs" />
     <Compile Include="Services\HelloService.cs" />
     <Compile Include="Global.asax.cs">

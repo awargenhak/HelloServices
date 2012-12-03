@@ -33,9 +33,9 @@ namespace HelloServices
                         _instance._pets.Add(new Dog() { Name = "Spike", Id = Guid.NewGuid() });
                         _instance._pets.Add(new Dog() { Name = "Bo", Id = Guid.NewGuid() });
                         _instance._pets.Add(new Dog() { Name = "Mike", Id = Guid.NewGuid() });
-                        _instance._pets.Add(new Cat() { Name = "Kitty", Id = Guid.NewGuid() });
-                        _instance._pets.Add(new Cat() { Name = "Mimi", Id = Guid.NewGuid() });
-                        _instance._pets.Add(new Cat() { Name = "FurBall", Id = Guid.NewGuid() });
+                        _instance._pets.Add(new Cat1() { Name = "Kitty", Id = Guid.NewGuid() });
+                        _instance._pets.Add(new Cat2() { Name = "Mimi", Id = Guid.NewGuid() });
+                        _instance._pets.Add(new Cat1() { Name = "FurBall", Id = Guid.NewGuid() });
                         _instance._pets.Add(new Parrot() { Name = "Polly", Id = Guid.NewGuid() });
                         _instance._pets.Add(new Parrot() { Name = "Rico", Id = Guid.NewGuid() });
                         _instance._pets.Add(new Parrot() { Name = "Juca", Id = Guid.NewGuid() });
