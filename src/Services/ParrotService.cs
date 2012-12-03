@@ -56,7 +56,7 @@ namespace HelloServices
 
         public override object OnPut(Parrot parrot)
         {
-            var x = (from n in PetDatabase.Instace.Pets
+            var x = (from n in _pets.Pets
                      where n.Id == parrot.Id
                      select n).SingleOrDefault();
 
@@ -65,8 +65,8 @@ namespace HelloServices
                 return new NotFoundResponse();
             }
 
-            PetDatabase.Instace.Pets.Remove(parrot);
-            PetDatabase.Instace.Pets.Add(parrot);
+            _pets.Pets.Remove(parrot);
+            _pets.Pets.Add(parrot);
             return parrot;
         }
     }
